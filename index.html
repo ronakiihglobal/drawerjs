@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://carstenschaefer.github.io/DrawerJs/assets/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://carstenschaefer.github.io/DrawerJs/dist/drawerJs.css" />
+        <style>
+            #canvas-editor {
+                margin-top: 50px;
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="canvas-editor"></div>
+        <script src="https://carstenschaefer.github.io/DrawerJs/lib/jquery-1.10.1.min.js"></script>
+        <script src="https://carstenschaefer.github.io/DrawerJs/dist/drawerJs.standalone.js"></script>
+        <script src="drawerLocalization.js"></script>
+        <script src="drawerJsConfig.js"></script>
+        <script>
+            $(document).ready(function () {
+                var drawer = new DrawerJs.Drawer(null, {
+                    texts: customLocalization,
+                    plugins: drawerPlugins,
+                    defaultImageUrl: '/image.jpg',
+                    defaultActivePlugin : { name : 'Pencil', mode : 'lastUsed'},
+                }, 600, 600);
+                $('#canvas-editor').append(drawer.getHtml());
+                drawer.onInsert();
+            });
+        </script>
+    </body>
+</html>
