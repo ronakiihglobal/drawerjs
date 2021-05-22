@@ -45,7 +45,9 @@
 
                 downloadImage = function(){
                     var imageData = drawer.api.getCanvasAsImage()
-                    console.log(imageData)
+                    //console.log(imageData)
+                    var ss = drawer.api.getCanvasAsJSON();
+                    console.log(ss)
                     download(imageData)
                 }
             });
