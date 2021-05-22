@@ -26,6 +26,12 @@
                 var drawer = new DrawerJs.Drawer(null, {
                     texts: customLocalization,
                     plugins: drawerPlugins,
+                    pluginsConfig:{
+                        scaleDownLargeImage: true,
+                        maxImageSizeKb: 10240,
+                        acceptedMIMETypes: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'],
+                        cropIsActive: true
+                    },
                     defaultImageUrl: 'https://ronakiihglobal.github.io/drawerjs/image.jpg',
                     defaultActivePlugin : { name : 'Pencil', mode : 'lastUsed'},
                 }, 600, 600);
