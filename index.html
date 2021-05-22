@@ -38,7 +38,7 @@
                 $('#canvas-editor').append(drawer.getHtml());
                 drawer.onInsert();
                 drawer.api.startEditing();
-                drawer.api.addImageFromUrl('https://ronakiihglobal.github.io/drawerjs/image.jpg', {'centerImage': true})
+                drawer.api.addImageFromUrl('https://ronakiihglobal.github.io/drawerjs/image.jpg', {'centerImage': true, 'scaleX': 1, 'scaleY': 1})
 
                 drawer.fCanvas.on('after:render', function(){ 
                     var ssJson = {
