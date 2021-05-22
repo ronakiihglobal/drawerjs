@@ -15,5 +15,6 @@ var drawerPlugins = [
     'Resize',
     'ShapeContextMenu',
     'Image',
+    'ImageCrop',
     'BackgroundImage',
 ];
