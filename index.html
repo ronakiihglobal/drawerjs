@@ -19,6 +19,7 @@
         <script src="drawerJsConfig.js"></script>
         <script src="download.js"></script>
         <script>
+            var downloadImage;
             $(document).ready(function () {
                 var drawer = new DrawerJs.Drawer(null, {
                     texts: customLocalization,
@@ -29,7 +30,7 @@
                 $('#canvas-editor').append(drawer.getHtml());
                 drawer.onInsert();
 
-                function downloadImage(){
+                downloadImage = function(){
                     var imageData = drawer.api.getCanvasAsImage()
                     download(imageData)
                 }
