@@ -38,6 +38,7 @@
                 $('#canvas-editor').append(drawer.getHtml());
                 drawer.onInsert();
                 drawer.api.startEditing();
+                drawer.api.addImageFromUrl('https://ronakiihglobal.github.io/drawerjs/image.jpg', {'centerImage': true, 'scaleX': 2, 'scaleY': 2})
 
                 drawer.fCanvas.on('after:render', function(){ 
                     var ssJson = {
@@ -1369,7 +1370,7 @@
     "resizeFilters": []
   }
 }
-                    drawer.api.loadCanvasFromData(ssJson)
+                    //drawer.api.loadCanvasFromData(ssJson)
                 });
 
                 downloadImage = function(){
