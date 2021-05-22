@@ -13,5 +13,7 @@ var drawerPlugins = [
     'ShapeBorder',
     'BrushSize',
     'Resize',
-    'ShapeContextMenu'
+    'ShapeContextMenu',
+    'Image',
+    'BackgroundImage',
 ];
