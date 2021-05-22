@@ -12,7 +12,7 @@
     </head>
     <body>
         <div id="canvas-editor"></div>
-        <button onclick="downloadImage">Save</button>
+        <button onclick="downloadImage()">Save</button>
         <script src="https://carstenschaefer.github.io/DrawerJs/lib/jquery-1.10.1.min.js"></script>
         <script src="https://carstenschaefer.github.io/DrawerJs/dist/drawerJs.standalone.js"></script>
         <script src="drawerLocalization.js"></script>
@@ -28,12 +28,14 @@
                 }, 600, 600);
                 $('#canvas-editor').append(drawer.getHtml());
                 drawer.onInsert();
+
+                function downloadImage(){
+                    var imageData = drawer.api.getCanvasAsImage()
+                    download(imageData)
+                }
             });
 
-            function downloadImage(){
-                var imageData = drawer.api.getCanvasAsImage()
-                download(imageData)
-            }
+            
         </script>
     </body>
 </html>
